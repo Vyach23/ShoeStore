@@ -31,13 +31,12 @@ class AddShoeViewModel : ViewModel() {
         _nameIsCorrect.value = true
         _descriptionIsCorrect.value = true
         _companyIsCorrect.value = true
-        _sizeIsCorrect.value = true
     }
 
     fun saveData(
         shoe: Shoe
     ) {
-        val (name, size, company, description) = shoe
+        val (name,  company, description) = shoe
         val nameIsCorrect = name.isNotBlank()
         _nameIsCorrect.value = nameIsCorrect
         val descriptionIsCorrect = description.isNotBlank()
